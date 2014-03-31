@@ -6,8 +6,8 @@
   (require-package 'org-mac-iCal))
 
 
-(define-key global-map (kbd "C-c l") 'org-store-link)
-(define-key global-map (kbd "C-c a") 'org-agenda)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
 
 ;; Various preferences
 (setq org-log-done t
@@ -32,18 +32,8 @@
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
-              (sequence "WAITING(w@/!)" "SOMEDAY(S)" "|" "CANCELLED(c@/!)"))))
+              (sequence "WAITING(w@/!)" "SOMEDAY(S)" "PROJECT(P@)" "|" "CANCELLED(c@/!)"))))
 
-(setq org-agenda-files (list "~/Dropbox/org/life.org"
-                             "~/Dropbox/org/study.org"
-                             "~/Dropbox/org/work.org"
-                             "~/Dropbox/org/later.org"))
-
-(setq org-remember-templates
-      '(("TODO" ?t "* TODO %?\n %x\n %a" "~/Dropbox/org/later.org" "Tasks")
-        ("IDEA" ?i "* IDEA %?\n %i\n %a" "~/Dropbox/org/later.org" "Waiting")
-        ("WAITING" ?w "* WAITING %?\n %i\n %a" "~/Dropbox/org/later.org" "Tasks")
-        ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org clock
@@ -98,6 +88,20 @@
 ;;                 (insert (match-string 0))))))
 
 
+;; define agenda's path
+(setq org-agenda-files (list "~/Dropbox/org/work.org"
+                             "~/Dropbox/org/life.org"
+                             "~/Dropbox/org/study.org"
+                             "~/Dropbox/org/later.org"))
+
+;; mobileorg settings
+(setq org-directory "~/Dropbox/org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-mobile-files '("~/Dropbox/org"))
+
+
+
 (after-load 'org
   (define-key org-mode-map (kbd "C-M-<up>") 'org-up-element)
   (when *is-a-mac*
@@ -106,5 +110,20 @@
   (when *is-a-mac*
     (autoload 'omlg-grab-link "org-mac-link")
     (define-key org-mode-map (kbd "C-c g") 'omlg-grab-link)))
+
+;;; Setting the index global key for the remember
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+;; Bind Org Capture to C-c r
+(global-set-key "\C-cr" 'org-capture)
+
+;; Org Capture
+(setq org-capture-templates
+      '(("s" "TODO" entry (file+headline (concat org-directory "/later.org") "TASKS")
+         "* TODO %?\n %i\n")
+        ("i" "IDEA" entry (file+headline (concat org-directory "/later.org") "IDEAS")
+         "* TODO %?\n %i\n")
+        ("i" "WAITING" entry (file+headline (concat org-directory "/later.org") "WAITING")
+         "* WAITING %?\n %i\n")
+        ))
 
 (provide 'init-org)
