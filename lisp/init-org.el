@@ -34,6 +34,16 @@
       (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
               (sequence "WAITING(w@/!)" "SOMEDAY(S)" "|" "CANCELLED(c@/!)"))))
 
+(setq org-agenda-files (list "~/Dropbox/org/life.org"
+                             "~/Dropbox/org/study.org"
+                             "~/Dropbox/org/work.org"
+                             "~/Dropbox/org/later.org"))
+
+(setq org-remember-templates
+      '(("TODO" ?t "* TODO %?\n %x\n %a" "~/Dropbox/org/later.org" "Tasks")
+        ("IDEA" ?i "* IDEA %?\n %i\n %a" "~/Dropbox/org/later.org" "Waiting")
+        ("WAITING" ?w "* WAITING %?\n %i\n %a" "~/Dropbox/org/later.org" "Tasks")
+        ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org clock
