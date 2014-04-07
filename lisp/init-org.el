@@ -118,7 +118,7 @@
 
 ;; Org Capture
 (setq org-capture-templates
-      '(("s" "TODO" entry (file+headline (concat org-directory "/later.org") "TASKS")
+      '(("t" "TODO" entry (file+headline (concat org-directory "/later.org") "TASKS")
          "* TODO %?\n %i\n")
         ("i" "IDEA" entry (file+headline (concat org-directory "/later.org") "IDEAS")
          "* TODO %?\n %i\n")
