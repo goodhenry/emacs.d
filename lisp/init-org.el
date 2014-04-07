@@ -122,7 +122,7 @@
          "* TODO %?\n %i\n")
         ("i" "IDEA" entry (file+headline (concat org-directory "/later.org") "IDEAS")
          "* TODO %?\n %i\n")
-        ("i" "WAITING" entry (file+headline (concat org-directory "/later.org") "WAITING")
+        ("w" "WAITING" entry (file+headline (concat org-directory "/later.org") "WAITING")
          "* WAITING %?\n %i\n")
         ))
 
