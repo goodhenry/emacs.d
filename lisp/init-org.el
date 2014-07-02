@@ -89,14 +89,12 @@
 
 
 ;; define agenda's path
-(setq org-agenda-files (list "~/Dropbox/org/work.org"
-                             "~/Dropbox/org/life.org"
-                             "~/Dropbox/org/study.org"
+(setq org-agenda-files (list "~/Dropbox/org/now.org"
                              "~/Dropbox/org/later.org"))
 
 ;; mobileorg settings
 (setq org-directory "~/Dropbox/org")
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/later.org")
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 (setq org-mobile-files '("~/Dropbox/org"))
 
