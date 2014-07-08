@@ -124,4 +124,7 @@
          "* WAITING %?\n %i\n")
         ))
 
+;;; try to  solve the problem of Copy and Paste Problems on Mac http://nickhigham.wordpress.com/2013/09/25/solutions-to-some-emacs-problems/
+(setq save-interprogram-paste-before-kill nil)
+
 (provide 'init-org)
