@@ -62,6 +62,7 @@
 (setq dabbrev-friend-buffer-function 'sanityinc/dabbrev-friend-buffer)
 
 ;;; auto-complete-clang setting
+(require-package 'auto-complete-clang)
 (require 'auto-complete-clang)
 (setq ac-clang-auto-save t)
 (setq ac-auto-start t)
