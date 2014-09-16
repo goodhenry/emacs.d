@@ -96,6 +96,7 @@
 (require 'init-ledger)
 
 (require 'init-cmodel)
+(require 'init-emacs-w3m)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
