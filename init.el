@@ -97,6 +97,7 @@
 
 (require 'init-cmodel)
 (require 'init-emacs-w3m)
+(require 'init-elfeed)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
