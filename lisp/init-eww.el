@@ -4,7 +4,7 @@
 
 (global-set-key (kbd "C-x g") 'eww-open)
 
-(defcustom eww-search-prefix-google "http://www.google.com.au/search?hl=en&q=%s"
+(defcustom eww-search-prefix-google "http://www.google.com.au/search?hl=en&q="
   "Prefix URL to search engine"
   :version "24.4"
   :group 'eww
