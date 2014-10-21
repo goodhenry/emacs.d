@@ -99,6 +99,7 @@
 (require 'init-emacs-w3m)
 (require 'init-elfeed)
 (require 'init-eww)
+(require 'init-applescript-mode)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
