@@ -127,7 +127,18 @@
 ;;; try to  solve the problem of Copy and Paste Problems on Mac http://nickhigham.wordpress.com/2013/09/25/solutions-to-some-emacs-problems/
 (setq save-interprogram-paste-before-kill nil)
 
-;; ;; Fork the work (async) of pushing to mobile
+;;; Auto calendar function in osx
+(add-hook 'after-save-hook
+          (when *is-a-mac*
+            (lambda ()
+            (if (or (eq major-mode 'org-mode) (eq major-mode 'org-agenda-mode))
+                (progn
+                  (setq org-add-event-command (concat "< " buffer-file-name))
+                  (call-process-shell-command "_org_file_handler" nil nil nil org-add-event-command))))))
+
+
+
+;y; ;; Fork the work (async) of pushing to mobile
 ;; ;; https://gist.github.com/3111823 ASYNC org mobile push...
 ;; (require 'gnus-async)
 ;; ;; Define a timer variable

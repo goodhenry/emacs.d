@@ -4,7 +4,7 @@
 (global-set-key "\C-co" 'c-open-and-prepare)
 (global-set-key "\C-cn" 'c-prepare)
 
-(add-hook 'c-mode-common-hook
+(add-hook 'c-mode-common-hook 
 	  '(lambda ()
 	     ;; use spaces instead of tabs
 	     (setq indent-tabs-mode nil)
@@ -22,7 +22,7 @@
 			     ;; for array initializations
 			     (brace-list-open)
 			     (brace-list-close)
-			     (brace-list-intro)
+			      (brace-list-intro)
 			     (brace-entry-open)
 			     ;; for function definitions
 			     (defun-open after)
