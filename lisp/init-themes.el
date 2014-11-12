@@ -1,6 +1,7 @@
 (when (< emacs-major-version 24)
   (require-package 'color-theme))
 
+(require-package 'sublime-themes)
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'color-theme-sanityinc-tomorrow)
 
