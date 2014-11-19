@@ -17,7 +17,7 @@
 ;;----------------------------------------------------------------------------
 (setq-default truncate-lines t)
 (setq-default global-visual-line-mode t)
-(global-linum-mode t)
+;;;(global-linum-mode t)
 
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
