@@ -1,6 +1,4 @@
-# A reasonable Emacs config
-
-This is my configuration tree, built on the setting of Steve Purcell
+This is henry's configuration tree, built on the setting of Steve Purcell
 Added some other functions.
 
 * C-programming-modle (which is combined work with Eric matin's scripts (COMP 9021)
