@@ -1,4 +1,4 @@
-
+;;; This is laozhang's setting file
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 

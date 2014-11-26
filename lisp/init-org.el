@@ -128,13 +128,13 @@
 (setq save-interprogram-paste-before-kill nil)
 
 ;;; Auto calendar function in osx
-(add-hook 'after-save-hook
-          (when *is-a-mac*
-            (lambda ()
-            (if (or (eq major-mode 'org-mode) (eq major-mode 'org-agenda-mode))
-                (progn
-                  (setq org-add-event-command (concat "< " buffer-file-name))
-                  (call-process-shell-command "_org_file_handler" nil nil nil org-add-event-command))))))
+;;;(add-hook 'after-save-hook
+;;;          (when *is-a-mac*
+;;;            (lambda ()
+;;;            (if (or (eq major-mode 'org-mode) (eq major-mode 'org-agenda-mode))
+;;;                (progn
+;;;                  (setq org-add-event-command (concat "< " buffer-file-name))
+;;;                  (call-process-shell-command "_org_file_handler" nil nil nil org-add-event-command))))))
 
 
 
